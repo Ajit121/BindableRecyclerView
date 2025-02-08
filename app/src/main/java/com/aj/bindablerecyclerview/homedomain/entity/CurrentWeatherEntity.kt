@@ -1,0 +1,68 @@
+package com.aj.bindablerecyclerview.homedomain.entity
+
+import com.aj.bindablerecyclerview.homedomain.entity.AirQualityEntity
+import com.aj.bindablerecyclerview.homedomain.entity.ConditionEntity
+
+data class CurrentWeatherEntity(
+    var lastUpdatedEpoch: Int,
+    var lastUpdated: String,
+    var tempC: String,
+    var tempF: String,
+    var isDay: Boolean,
+    var condition: ConditionEntity,
+    var windMph: String,
+    var windKph: String,
+    var windDegree: String,
+    var windDir: String,
+    var pressureIn: String,
+    var precipMm: String,
+    var precipIn: String,
+    var humidity: String,
+    var cloud: String,
+    var feelslikeC: String,
+    var feelslikeF: String,
+    var windchillC: String,
+    var windchillF: String,
+    var heatindexC: String,
+    var heatindexF: String,
+    var dewpointC: String,
+    var dewpointF: String,
+    var visKm: String,
+    var visMiles: String,
+    var uv: String,
+    var gustMph: String,
+    var gustKph: String,
+    var airQuality: AirQualityEntity
+) {
+    constructor() : this(
+        0,
+        "",
+        "--",
+        "--",
+        true,
+        ConditionEntity(),
+        "",
+        "--",
+        "--",
+        "",
+        "--",
+        "--",
+        "--",
+        "--",
+        "--",
+        "--",
+        "--",
+        "--",
+        "--",
+        "--",
+        "--",
+        "--",
+        "",
+        "",
+        "--",
+        "--",
+        "--",
+        "--",
+        AirQualityEntity()
+    )
+}
